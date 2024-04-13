@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import bcryptjs from "bcryptjs";
 import jwtTokenGen from "../middlewares/jwtTokenGen.js";
-
+import { io } from "../socket/socket.js";
 export const signup = async (req, res) => {
   // res.send("signup route");
 
@@ -32,8 +32,14 @@ export const signup = async (req, res) => {
       if (newUser) {
         jwtTokenGen(newUser._id, res);
         await newUser.save();
+        // socket io functionality
+        // send event to all users that new user joined
+        const filteredUser = { ...newUser._doc }; // spread operator to create a copy
+        delete filteredUser.password;
+        io.emit("NEW_USER_JOINED", filteredUser);
+
         res.status(200).json({
-          id: newUser._id,
+          _id: newUser._id,
           fullName: newUser.fullName,
           username: newUser.username,
           profilePic: newUser.profilePic,
