@@ -5,14 +5,16 @@ import useConversation from "../store/useConversation";
 
 const useListenMessages = () => {
   const { socket } = useSocketContext();
-  const { messages, setMessages } = useConversation();
+  const { messages, setMessages, selectedConversation } = useConversation();
 
   useEffect(() => {
     socket?.on("newMessage", (newMessage) => {
       newMessage.shake = true;
       const sound = new Audio(notification);
       sound.play();
-      setMessages([...messages, newMessage]);
+      if (selectedConversation._id === newMessage.senderId) {
+        setMessages([...messages, newMessage]);
+      }
     });
 
     return () => socket?.off("newMessage");
