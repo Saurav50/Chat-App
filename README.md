@@ -21,7 +21,7 @@
 - Online User Status: Track and display user availability using Socket.io and React Context
 - Global State Management: Managed efficiently with Zustand for seamless user experience
 - Error Handling: Robust error handling mechanisms on both server and client sides
-- Deployment Mastery: Expert tips and tricks for deploying your app like a pro, all for free!
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
