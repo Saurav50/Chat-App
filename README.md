@@ -27,7 +27,7 @@
 To run this project, you will need to add the following environment variables to your .env file
 
 `PORT=...`
-`MONGO_DB_URI=...`
+`MONGO_DB_URL=...`
 `JWT_SECRET=...`
 `NODE_ENV=...`
 ## Run Locally
