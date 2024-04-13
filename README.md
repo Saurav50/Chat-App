@@ -15,12 +15,12 @@
 
 ## Features
 
-- Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js) + Socket.io + TailwindCSS + Daisy UI
-- Authentication & Authorization: Implemented with JWT for secure user interactions
-- Real-time Messaging: Utilizing Socket.io for instant message delivery
-- Online User Status: Track and display user availability using Socket.io and React Context
-- Global State Management: Managed efficiently with Zustand for seamless user experience
-- Error Handling: Robust error handling mechanisms on both server and client sides
+- **Tech Stack:** MERN (MongoDB, Express.js, React.js, Node.js) + Socket.io + TailwindCSS + Daisy UI
+- **Authentication & Authorization:** Implemented with JWT for secure user interactions
+- **Real-time Messaging:** Utilizing Socket.io for instant message delivery
+- **Online User Status:** Track and display user availability using Socket.io and React Context
+- **Global State Management:** Managed efficiently with Zustand for seamless user experience
+- **Error Handling:** Robust error handling mechanisms on both server and client sides
 
 ## Environment Variables
 
