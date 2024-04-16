@@ -8,6 +8,8 @@ const useConversation = create((set) => ({
   setMessages: (messages) => set({ messages }),
   conversations: [],
   setConversations: (conversations) => set({ conversations }),
+  files: [],
+  setFiles: (files) => set({ files }),
 }));
 
 export default useConversation;
