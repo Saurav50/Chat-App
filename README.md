@@ -31,6 +31,9 @@ To run this project, you will need to add the following environment variables to
 `MONGO_DB_URL=...`
 `JWT_SECRET=...`
 `NODE_ENV=...`
+`ACCESS_KEY=...`
+`SECRET_ACCESS_KEY=...`
+
 ## Run Locally
 
 Clone the project
